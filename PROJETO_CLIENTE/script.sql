@@ -36,3 +36,15 @@ VALUES('Lilian', 'F', 'SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ', '94778569
 INSERT INTO cliente VALUES
 ('Ana', 'F', 'Ana@gmail.com', 58698564, '953641025', 'PRES  ANTONIO CARLOS - CENTRO - SAO PAULO -SP'),
 ('Carla', 'F', 'Carla@gmail.com', 15868564, '233641025', 'SAMUEL SILVA - CENTRO - BELO HORIZONTE - MG');
+
+
+
+
+-- filtrar dados
+SELECT nome, sexo FROM cliente WHERE sexo ='m';
+
+SELECT nome, endereco FROM cliente WHERE sexo = 'f';
+
+-- utilizando o LIKE 
+-- caracter coringa % -> significa qualquer coisa antes ou depois
+SELECT nome, sexo FROM cliente WHERE endereco LIKE '%RJ';
