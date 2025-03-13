@@ -53,4 +53,5 @@ SELECT valor_livro FROM livros WHERE uf_editora = 'sp';
 
 -- 6) TRAZER OS DADOS DOS AUTORES DO SEXO MASCULINO QUE TIVERAM LIVROS PUBLICADOS POR SÃO PAULO OU RIO DE JANEIRO
 SELECT nome_livro, nome_autor, sexo_autor, numero_paginas, nome_editora, valor_livro, uf_editora, ano_publicacao
-FROM livros WHERE uf_editora IN ('SP','RJ');
+FROM livros WHERE sexo_autor ='M'
+AND uf_editora = 'SP' OR uf_editora = 'RJ';
